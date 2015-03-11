@@ -1,1 +1,29 @@
-<h1>Channels</h1>
+<% if notice %>
+	<div class="alert alert-success" role="alert">
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hiden="true">&times;</span>
+		</button>
+	</div>
+<% end %>
+
+<h1>Channels List</h1>
+<table class="table table-striped table-hover">
+	<tbody>
+		<tr>
+			<th>Name</th>
+			<th>Created at</th>
+			<th>Update at</th>
+		</tr>
+		<% @channels.each do |channel| %>
+		<tr>
+			<td><%= channel.name %></td>
+			<td><%= channel.created_at %></td>
+			<td><%= channel.updated_at %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<%= link_to 'New channel', new_channel_path, class: 'btn btn-success' %>
+
+
+

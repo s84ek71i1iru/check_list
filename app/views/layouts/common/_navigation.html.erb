@@ -7,13 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Project name</a>
+      <%= link_to 'Checklist System', root_path, class: 'navbar-brand' %>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <%= navi_li 'Home', root_path, 'static_pages' %>
+        <%= navi_li 'User', users_path, 'users' %>
+        <%= navi_li 'Channel', channels_path, 'channels' %>
+        <%= navi_li 'Item', items_path, 'items' %>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
